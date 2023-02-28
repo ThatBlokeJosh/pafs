@@ -1,5 +1,0 @@
-/home/user/Downloads
-~/Pictures
-~/Documents
-~/Videos
-~/Music
