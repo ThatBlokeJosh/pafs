@@ -4,5 +4,8 @@ If you want to edit your initial configuration then change the contents of the c
 
 # TODO: :smile:
   Test on Windows 
+  
   Add system arguments :fire:
+  
   Make better customization :rainbow:
+  
