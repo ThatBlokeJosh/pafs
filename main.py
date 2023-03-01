@@ -2,7 +2,10 @@ import os, platform, json
 
 def readConf():
     with open("conf.JSON", "r") as f:
-        data = json.load(f)["paths"]
+        try:
+            data = json.load(f)["paths"]
+        except:
+            print("Missing paths in conf.JSON")
         paths = []
         for path in range(len(data)):
             paths.append(data[path]["path"])
