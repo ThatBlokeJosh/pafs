@@ -1,36 +1,13 @@
-import os, platform
+import os, platform, json
 
 def readConf():
-    if open("conf.txt", "r").readlines():
-        with open("conf.txt", "r") as f:
-            downloadPath = f.readline()
-            imagePath = f.readline()
-            documentPath = f.readline()
-            videoPath = f.readline()
-            musicPath = f.readline()
-            f.close()
-        paths = [downloadPath, imagePath, documentPath, videoPath, musicPath]
-        for path in paths:
-            paths[paths.index(path)] = path.strip("\n")
-            return paths
-
-    else:
-        with open("conf.txt", "w") as f:
-            # Please enter the whole path
-            downloadPath = input("Enter the whole download path: ")
-            f.write(f"{downloadPath}\n")
-            # Now you can enter a path like ~/Pictures
-            imagePath = input("Enter the image path: ")
-            f.write(f"{imagePath}\n")
-            documentPath = input("Enter the document path: ")
-            f.write(f"{documentPath}\n")
-            videoPath = input("Enter the video path: ")
-            f.write(f"{videoPath}\n")
-            musicPath = input("Enter the music path: ")
-            f.write(f"{musicPath}\n")
-            f.close()
-            print("Done!")
-
+    with open("conf.JSON", "r") as f:
+        data = json.load(f)["paths"]
+        paths = []
+        for path in range(len(data)):
+            paths.append(data[path]["path"])
+        paths[0] = paths[0].replace("user", os.getlogin())
+        return paths
 
 def moveFiles(paths):
     for file in os.listdir(paths[0]):
@@ -45,7 +22,7 @@ def moveFiles(paths):
                 os.system(f"mv {paths[0]}/{file} {paths[4]}/{file}")
             else:
                 print("No files to move")
-        elif platform.system() == "Windows":
+        else:
             if file.endswith(".jpg") or file.endswith(".png") or file.endswith(".jpeg"):
                 os.system(f"move {paths[0]}/{file} {paths[1]}/{file}")
             elif file.endswith(".pdf") or file.endswith(".docx") or file.endswith(".txt"):
@@ -59,7 +36,7 @@ def moveFiles(paths):
 
 def main():
     paths = readConf()
-    print(platform.system())
+    print(paths)
     while True:
         moveFiles(paths)
 

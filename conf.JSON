@@ -1,0 +1,24 @@
+{
+    "paths": [
+        {
+            "id": "Downloads",
+            "path": "/home/user/Downloads"
+        },
+        {
+            "id": "Pictures",
+            "path": "~/Pictures"
+        },
+        {
+            "id": "Documents",
+            "path": "~/Documents"
+        },
+        {
+            "id": "Videos",
+            "path": "~/Videos"
+        },
+        {
+            "id": "Music",
+            "path": "~/Music"
+        }
+    ]
+}
