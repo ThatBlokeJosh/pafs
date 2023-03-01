@@ -9,7 +9,7 @@ def readConf():
         paths[0] = paths[0].replace("user", os.getlogin())
         return paths
 
-def moveFiles(paths):
+def moveFiles(paths, extensions=[".jpg", ".png", ".jpeg", ".pdf", ".docx", ".txt", ".mp4", ".mkv", ".avi", ".mp3", ".wav", ".flac"]):
     for file in os.listdir(paths[0]):
         if platform.system() == "Linux":
             if file.endswith(".jpg") or file.endswith(".png") or file.endswith(".jpeg"):

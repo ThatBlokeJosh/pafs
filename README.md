@@ -1,11 +1,11 @@
-# Python folder sorter :snake:
-A very simple cli app that automatically sorts files :rocket:
-If you want to edit your default configuration then change the contents of the conf.JSON file :smile:
+# PAFS: Python automatic folder sorter :snake:
 
-# TODO: :smile:
-  Test on Windows 
-  
-  Add system arguments :fire:
-  
-  Make better customization :rainbow:
-  
+## *An automatic :robot: downloads folder sorter writen in Python :snake: with JSON configuration*
+
+# TODO:
+
+- [ ]  Add Windows :desktop_computer: support
+
+- [ ]   Add some form of system arguments :angry:
+
+- [x]  Increase configuration :gear:

@@ -20,5 +20,23 @@
             "id": "Music",
             "path": "~/Music"
         }
+    ],
+    "extensions": [
+        {
+            "id": "Images",
+            "extensions": ["jpg", "png", "gif", "bmp", "jpeg"]
+        },
+        {
+            "id": "Documents",
+            "extensions": ["doc", "docx", "pdf", "txt", "odt", "rtf", "xls", "xlsx", "ppt", "pptx"]
+        },
+        {
+            "id": "Videos",
+            "extensions": ["avi", "mp4", "mkv", "mov", "wmv", "flv", "mpg", "mpeg", "3gp", "webm"]
+        },
+        {
+            "id": "Music",
+            "extensions": ["mp3", "wav", "ogg", "flac", "m4a", "wma"]
+        }
     ]
 }
