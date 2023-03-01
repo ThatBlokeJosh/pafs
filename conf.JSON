@@ -24,7 +24,7 @@
     "extensions": [
         {
             "id": "Images",
-            "extensions": ["jpg", "png", "gif", "bmp", "jpeg"]
+            "extensions": ["jpg", "png", "gif", "bmp", "jpeg", "svg", "tiff", "ico", "webp"]
         },
         {
             "id": "Documents",
