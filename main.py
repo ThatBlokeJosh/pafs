@@ -26,7 +26,8 @@ def moveFiles(paths, extensions):
                 os.system(f"mv {paths[0]}/{file} {paths[3]}/{file}")
             elif extensions[3]["extensions"].__contains__(file.split(".")[-1]):
                 os.system(f"mv {paths[0]}/{file} {paths[4]}/{file}")
-
+            elif extensions[4]["extensions"].__contains__(file.split(".")[-1]):
+                os.system(f"mv {paths[0]}/{file} {paths[5]}/{file}")
 def main():
     paths = readConf()
     extensions = getExt()
