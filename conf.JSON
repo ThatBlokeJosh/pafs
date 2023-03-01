@@ -19,6 +19,10 @@
         {
             "id": "Music",
             "path": "~/Music"
+        },
+        {
+            "id": "Code",
+            "path": "~/Coding"
         }
     ],
     "extensions": [
@@ -37,6 +41,10 @@
         {
             "id": "Music",
             "extensions": ["mp3", "wav", "ogg", "flac", "m4a", "wma"]
+        },
+        {
+            "id": "Code",
+            "extensions": ["py", "css", "scss", "c", "cs", "html", "js", "svelte", "go", "kt", "xml", "java", "php", "rb", "rs", "ts", "tsx", "sh", "bat", "cpp", "h", "hpp", "hxx", "cc", "cxx", "c++"]
         }
     ]
 }
